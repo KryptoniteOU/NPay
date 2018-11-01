@@ -26,7 +26,7 @@ Drag NPay-Qt to your applications folder, and then run NPay-Qt.
 
 ### Need Help?
 
-* See the documentation at the [NPay Wiki](https://en.bitcoin.it/wiki/Main_Page) ***TODO***
+* See the documentation at the [NPay Wiki](https://github.com/KryptoniteOU/NPay/wiki) ***TODO***
 for help and more information.
 * Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php) or on the [NPay Forum](http://npay.network/).
 * Join one of our Telegram groups [NPay Network Official Group](https://t.me/npaynetwork).
