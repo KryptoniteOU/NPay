@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  npayd The NPay core server.
+#
+#
+# chkconfig: 345 80 20
+# description: npayd
+# processname: npayd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/npayd, see below
+if [ -f /etc/sysconfig/npayd ]; then
+        . /etc/sysconfig/npayd
+fi
+
+RETVAL=0
+
+prog=npayd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/npayd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/npayd}
+
+# npayd defaults to /usr/bin/npayd, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/npayd}
+
+# npayd opts default to -disablewallet, override with BITCOIND_OPTS
+bitcoind_opts=${BITCOIND_OPTS}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

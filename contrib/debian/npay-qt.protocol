@@ -1,0 +1,11 @@
+[Protocol]
+exec=npay-qt '%u'
+protocol=npay
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

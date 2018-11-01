@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NPay
+Comment=NPay P2P Cryptocurrency
+Comment[fr]=NPay, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=NPay, eşten eşe kriptografik sanal para birimi
+Exec=npay-qt %u
+Terminal=false
+Type=Application
+Icon=npay128
+MimeType=x-scheme-handler/npay;
+Categories=Office;Finance;

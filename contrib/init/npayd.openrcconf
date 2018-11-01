@@ -1,0 +1,26 @@
+# /etc/conf.d/npayd: config file for /etc/init.d/npayd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/npay/npay.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/npayd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/npayd.pid"
+
+# Where to write npayd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/npayd"
+
+# User and group to own npayd process
+#BITCOIND_USER="npay"
+#BITCOIND_GROUP="npay"
+
+# Path to npayd executable
+#BITCOIND_BIN="/usr/bin/npayd"
+
+# Nice value to run npayd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
