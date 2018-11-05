@@ -70,22 +70,18 @@ echo "Type the IP of this server, followed by [ENTER]:"
 read IP
 
 echo ""
-echo "Enter alias for new node"
-read ALIAS  
-
-echo ""
 echo "Enter masternode private key for node $ALIAS"
 read PRIVKEY
 
-PORT=30333
+PORT=30330
 CONF_DIR=~/.npay
   
-echo '#!/bin/bash' > ~/bin/npayd_$ALIAS.sh
-echo "npayd -daemon -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npayd_$ALIAS.sh
+echo '#!/bin/bash' > ~/bin/npayd.sh
+echo "npayd -daemon -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npayd.sh
 echo '#!/bin/bash' > ~/bin/npay-cli_$ALIAS.sh
-echo "npay-cli -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npay-cli_$ALIAS.sh
+echo "npay-cli -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npay-cli.sh
 echo '#!/bin/bash' > ~/bin/npay-tx_$ALIAS.sh
-echo "npay-tx -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npay-tx_$ALIAS.sh 
+echo "npay-tx -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npay-tx.sh 
 chmod 755 ~/bin/npay*.sh
 
 mkdir -p $CONF_DIR
