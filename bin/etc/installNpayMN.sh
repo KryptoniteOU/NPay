@@ -78,9 +78,9 @@ CONF_DIR=~/.npay
   
 echo '#!/bin/bash' > ~/bin/npayd.sh
 echo "npayd -daemon -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npayd.sh
-echo '#!/bin/bash' > ~/bin/npay-cli_$ALIAS.sh
+echo '#!/bin/bash' > ~/bin/npay-cli.sh
 echo "npay-cli -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npay-cli.sh
-echo '#!/bin/bash' > ~/bin/npay-tx_$ALIAS.sh
+echo '#!/bin/bash' > ~/bin/npay-tx.sh
 echo "npay-tx -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npay-tx.sh 
 chmod 755 ~/bin/npay*.sh
 
