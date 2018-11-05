@@ -77,9 +77,8 @@ echo ""
 echo "Enter masternode private key for node $ALIAS"
 read PRIVKEY
 
-ALIAS=${ALIAS,,}
 PORT=30333
-CONF_DIR=~/.npay_$ALIAS
+CONF_DIR=~/.npay
   
 echo '#!/bin/bash' > ~/bin/npayd_$ALIAS.sh
 echo "npayd -daemon -conf=$CONF_DIR/npay.conf -datadir=$CONF_DIR "'$*' >> ~/bin/npayd_$ALIAS.sh
@@ -93,17 +92,16 @@ mkdir -p $CONF_DIR
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> npay.conf_TEMP
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> npay.conf_TEMP
 echo "rpcallowip=127.0.0.1" >> npay.conf_TEMP
-echo "rpcport=44012" >> npay.conf_TEMP
 echo "listen=1" >> npay.conf_TEMP
 echo "server=1" >> npay.conf_TEMP
 echo "daemon=1" >> npay.conf_TEMP
 echo "logtimestamps=1" >> npay.conf_TEMP
-echo "maxconnections=128" >> npay.conf_TEMP
+echo "maxconnections=256" >> npay.conf_TEMP
 echo "masternode=1" >> npay.conf_TEMP
-echo "" >> npay.conf_TEMP
-echo "port=$PORT" >> npay.conf_TEMP
+echo "bind=$IP" >> npay.conf_TEMP
+echo "externalip=$IP" >> npay.conf_TEMP
 echo "masternodeaddr=$IP:$PORT" >> npay.conf_TEMP
 echo "masternodeprivkey=$PRIVKEY" >> npay.conf_TEMP
 sudo ufw allow $PORT/tcp
 mv npay.conf_TEMP $CONF_DIR/npay.conf
-sh ~/bin/npayd_$ALIAS.sh
+sh ~/bin/npayd.sh
