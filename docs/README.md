@@ -16,13 +16,19 @@ Unpack the files into a directory and run:
 - bin/32/npay-qt (GUI, 32-bit) or bin/32/npayd (headless, 32-bit)
 - bin/64/npay-qt (GUI, 64-bit) or bin/64/npayd (headless, 64-bit)
 
+- [Ubuntu 16.04 Wallet Download](http://downloads.npay.network/linux/linux.zip)
+
 ### Windows
 
 Unpack the files into a directory, and then run npay-qt.exe.
 
+- [Windows QT Wallet Download](http://downloads.npay.network/windows/windows.zip)
+
 ### OSX
 
 Drag NPay-Qt to your applications folder, and then run NPay-Qt.
+
+- [OSX QT Wallet Download](http://downloads.npay.network/macos/macos.zip)
 
 ### Need Help?
 
