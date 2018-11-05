@@ -73,7 +73,7 @@ echo ""
 echo "Enter masternode private key for node $ALIAS"
 read PRIVKEY
 
-PORT=30330
+PORT=30333
 CONF_DIR=~/.npay
   
 echo '#!/bin/bash' > ~/bin/npayd.sh
@@ -88,6 +88,7 @@ mkdir -p $CONF_DIR
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> npay.conf_TEMP
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> npay.conf_TEMP
 echo "rpcallowip=127.0.0.1" >> npay.conf_TEMP
+echo "rpcport=30330" >> npay.conf_TEMP
 echo "listen=1" >> npay.conf_TEMP
 echo "server=1" >> npay.conf_TEMP
 echo "daemon=1" >> npay.conf_TEMP
