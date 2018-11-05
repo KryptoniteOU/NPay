@@ -102,6 +102,13 @@ echo "bind=$IP" >> npay.conf_TEMP
 echo "externalip=$IP" >> npay.conf_TEMP
 echo "masternodeaddr=$IP:$PORT" >> npay.conf_TEMP
 echo "masternodeprivkey=$PRIVKEY" >> npay.conf_TEMP
+echo "addnode=node1.npay.network" >> npay.conf_TEMP
+echo "addnode=node2.npay.network" >> npay.conf_TEMP
+echo "addnode=node3.npay.network" >> npay.conf_TEMP
+echo "addnode=node4.npay.network" >> npay.conf_TEMP
+echo "addnode=node5.npay.network" >> npay.conf_TEMP
+echo "addnode=node6.npay.network" >> npay.conf_TEMP
+echo "addnode=node7.npay.network" >> npay.conf_TEMP
 sudo ufw allow $PORT/tcp
 mv npay.conf_TEMP $CONF_DIR/npay.conf
 sh ~/bin/npayd.sh
