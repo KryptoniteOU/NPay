@@ -99,13 +99,18 @@ echo "bind=$IP" >> npay.conf_TEMP
 echo "externalip=$IP" >> npay.conf_TEMP
 echo "masternodeaddr=$IP:$PORT" >> npay.conf_TEMP
 echo "masternodeprivkey=$PRIVKEY" >> npay.conf_TEMP
-echo "addnode=node1.npay.network" >> npay.conf_TEMP
-echo "addnode=node2.npay.network" >> npay.conf_TEMP
-echo "addnode=node3.npay.network" >> npay.conf_TEMP
-echo "addnode=node4.npay.network" >> npay.conf_TEMP
-echo "addnode=node5.npay.network" >> npay.conf_TEMP
-echo "addnode=node6.npay.network" >> npay.conf_TEMP
-echo "addnode=node7.npay.network" >> npay.conf_TEMP
+echo "addnode=45.32.48.35" >> npay.conf_TEMP
+echo "addnode=139.180.216.127" >> npay.conf_TEMP
+echo "addnode=216.155.135.33" >> npay.conf_TEMP
+echo "addnode=45.76.74.76" >> npay.conf_TEMP
+echo "addnode=217.69.3.33" >> npay.conf_TEMP
+echo "addnode=108.61.171.75" >> npay.conf_TEMP
+echo "addnode=95.179.199.45" >> npay.conf_TEMP
+echo "addnode=209.250.242.229" >> npay.conf_TEMP
+echo "addnode=167.179.73.152" >> npay.conf_TEMP
+echo "addnode=45.77.171.242" >> npay.conf_TEMP
+
 sudo ufw allow $PORT/tcp
+sudo ufw allow 30330/tcp
 mv npay.conf_TEMP $CONF_DIR/npay.conf
 sh ~/bin/npayd.sh
