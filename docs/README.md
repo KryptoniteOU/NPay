@@ -1,15 +1,18 @@
 NPay Core
 =====================
 
+
 White Paper
 ---------------------
-### White Paper Version 1
+### White Paper v1
 
 - [White Paper Download](http://downloads.npay.network/etc/NPAY%20Whitepaper%20v1.pdf)
+
 
 Setup
 ---------------------
 [NPay Core](http://npay.network) is the original NPay client and it builds the backbone of the network. However, it downloads and stores the entire history of NPay transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
+
 
 Running
 ---------------------
@@ -43,6 +46,7 @@ for help and more information.
 * Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php) or on the [NPay Forum](http://npay.network/).
 * Join one of our Telegram groups [NPay Network Official Group](https://t.me/npaynetwork).
 
+
 Building
 ---------------------
 The following are developer notes on how to build NPay on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
@@ -50,6 +54,7 @@ The following are developer notes on how to build NPay on your native platform. 
 - [OSX Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
 - [Gitian Building Guide](gitian-building.md)
+
 
 Development
 ---------------------
@@ -75,6 +80,7 @@ Join the [NPay Network Official Group] Telegram groups [NPay Network Official Gr
 - [Files](files.md)
 - [Tor Support](tor.md)
 - [Init Scripts (systemd/upstart/openrc)](init.md)
+
 
 License
 ---------------------
