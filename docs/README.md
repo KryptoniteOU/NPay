@@ -1,6 +1,12 @@
 NPay Core
 =====================
 
+White Paper
+---------------------
+### White Paper Version 1
+
+- [White Paper Download](http://downloads.npay.network/etc/NPAY%20Whitepaper%20v1.pdf)
+
 Setup
 ---------------------
 [NPay Core](http://npay.network) is the original NPay client and it builds the backbone of the network. However, it downloads and stores the entire history of NPay transactions; depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once.
