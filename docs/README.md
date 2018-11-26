@@ -43,7 +43,7 @@ Drag NPay-Qt to your applications folder, and then run NPay-Qt.
 
 * See the documentation at the [NPay Wiki](https://github.com/KryptoniteOU/NPay/wiki) ***TODO***
 for help and more information.
-* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php) or on the [NPay Forum](http://npay.network/).
+* Ask for help on [BitcoinTalk](https://bitcointalk.org/index.php?topic=5075719.0) or on the [NPay Forum](http://npay.network/).
 * Join one of our Telegram groups [NPay Network Official Group](https://t.me/npaynetwork).
 
 
@@ -72,7 +72,7 @@ The NPay repo's [root README](https://github.com/KryptoniteOU/NPay/blob/master/R
 
 ### Resources
 
-* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=1262920.0) .
+* Discuss on the [BitcoinTalk](https://bitcointalk.org/index.php?topic=5075719.0) .
 Join the [NPay Network Official Group] Telegram groups [NPay Network Official Group](https://t.me/npaynetwork).
 
 ### Miscellaneous
