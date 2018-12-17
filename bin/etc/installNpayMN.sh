@@ -112,5 +112,6 @@ echo "addnode=45.77.171.242" >> npay.conf_TEMP
 
 sudo ufw allow $PORT/tcp
 sudo ufw allow 30330/tcp
+sudo ufw allow 30333/tcp
 mv npay.conf_TEMP $CONF_DIR/npay.conf
 sh ~/bin/npayd.sh
