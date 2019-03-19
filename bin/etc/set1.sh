@@ -41,7 +41,7 @@ echo && echo && echo
   sudo echo '/swapfile none swap sw 0 0' >> /etc/fstab
   cd
 
-  wget http://downloads.npay.network/linux/linux.zip
+  wget https://raw.githubusercontent.com/KryptoniteOU/NPay/master/bin/linux/linux.zip
   unzip linux.zip
   chmod 755 ./npay*
   mv npay* /usr/local/bin/
