@@ -1,8 +1,8 @@
 #/bin/bash
-# replace source url in line 47 then run:
-# wget http://downloads.npay.network/etc/installNpayMN.sh
-# chmod 755 installNpayMN.sh
-# ./installNpayMN.sh
+# wget http://downloads.npay.network/etc/set1.sh
+# wget http://downloads.npay.network/etc/set2.sh
+# chmod 755 set1.sh set2.sh
+# ./set2.sh
 
 
 cd ~
@@ -15,52 +15,6 @@ echo "#        Make sure you double check before hitting enter         #"
 echo "#                                                                #"
 echo "##################################################################"
 echo && echo && echo
-
-echo "Do you want to install all needed dependencies (no if you did it before)? [y/n]"
-read DOSETUP
-
-if [[ $DOSETUP =~ "y" ]] ; then
-  sudo apt-get update
-  sudo apt-get -y upgrade
-  sudo apt-get -y dist-upgrade
-  sudo apt-get install -y nano htop git
-  sudo apt-get install -y software-properties-common
-  sudo apt-get install -y build-essential libtool autotools-dev pkg-config libssl-dev
-  sudo apt-get install -y libboost-all-dev
-  sudo apt-get install -y libevent-dev
-  sudo apt-get install -y libminiupnpc-dev
-  sudo apt-get install -y autoconf
-  sudo apt-get install -y automake unzip
-  sudo add-apt-repository  -y  ppa:bitcoin/bitcoin
-  sudo apt-get update
-  sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
-
-  cd /var
-  sudo touch swap.img
-  sudo chmod 600 swap.img
-  sudo dd if=/dev/zero of=/var/swap.img bs=1024k count=2000
-  sudo mkswap /var/swap.img
-  sudo swapon /var/swap.img
-  sudo free
-  sudo echo "/var/swap.img none swap sw 0 0" >> /etc/fstab
-  cd
-
-  wget http://downloads.npay.network/linux/linux.zip
-  unzip linux.zip
-  chmod 755 ./npay*
-  mv npay* /usr/local/bin/
-
-  sudo apt-get install -y ufw
-  sudo ufw allow ssh/tcp
-  sudo ufw limit ssh/tcp
-  sudo ufw logging on
-  echo "y" | sudo ufw enable
-  sudo ufw status
-
-  mkdir -p ~/bin
-  echo 'export PATH=~/bin:$PATH' > ~/.bash_aliases
-  source ~/.bashrc
-fi
 
 ## Setup conf
 mkdir -p ~/bin
@@ -100,8 +54,5 @@ echo "externalip=$IP" >> npay.conf_TEMP
 echo "masternodeaddr=$IP:$PORT" >> npay.conf_TEMP
 echo "masternodeprivkey=$PRIVKEY" >> npay.conf_TEMP
 
-sudo ufw allow $PORT/tcp
-sudo ufw allow 30330/tcp
-sudo ufw allow 30333/tcp
 mv npay.conf_TEMP $CONF_DIR/npay.conf
 sh ~/bin/npayd.sh
