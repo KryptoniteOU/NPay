@@ -45,6 +45,7 @@ echo && echo && echo
   unzip linux.zip
   chmod 755 ./npay*
   mv npay* /usr/local/bin/
+  rm linux.zip
 
   mkdir -p ~/bin
   echo 'export PATH=~/bin:$PATH' > ~/.bash_aliases
